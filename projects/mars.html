@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MARS, a student engineering research project exploring a cooperative drone-rover system for planetary exploration.">
+  <title>MARS | Joaquin Maidana Borjas</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+<body>
+  <header><nav class="navbar" aria-label="Main navigation">
+    <a href="../index.html" class="logo">JMB.</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#education">Education</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#documents">Documents</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav></header>
+  <main class="detail-main">
+    <section class="detail-hero">
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+      <p class="section-label">ROBOTICS / RESEARCH / AUTONOMOUS SYSTEMS</p>
+      <h1>Mobile Aerial Reconnaissance System <span>(MARS)</span></h1>
+      <p class="detail-lead">Exploring how an aerial scout and ground rover can work together to navigate unfamiliar terrain in future planetary exploration missions.</p>
+      <div class="detail-meta"><span>Loras College</span><span>Iowa Space Grant Consortium</span><span> September 2026 – Ongoing</span></div>
+      <figure class="detail-cover"><img src="../images/mars/rover.jpg" alt="Rocker-bogie lunar rover prototype" loading="eager"><figcaption>Rover hardware documentation from the MARS project.</figcaption></figure>
+    </section>
+
+    <section class="detail-section" id="overview">
+      <p class="section-label">01 / OVERVIEW</p><h2>The challenge</h2>
+      <p>Ground rovers can carry instruments and explore for extended periods, but obstacles and uneven terrain can limit their movement. Drones can survey terrain from above, although their flight time and payload are constrained. MARS proposes combining these strengths in a cooperative aerial-ground research platform.</p>
+      <p>The planned system uses a tethered drone to capture aerial imagery and a ground rover to process that information for mapping, route planning, and navigation. The project is still in development, the full integrated autonomous system is a research goal, not a completed result.</p>
+    </section>
+
+    <section class="detail-section" id="architecture">
+      <p class="section-label">02 / SYSTEM DESIGN</p><h2>How the proposed system works</h2>
+      <div class="detail-feature-grid">
+        <article class="detail-feature"><span class="detail-step">01</span><h3>Aerial reconnaissance</h3><p>The drone is intended to capture overhead imagery while maintaining low-level flight stability.</p></article>
+        <article class="detail-feature"><span class="detail-step">02</span><h3>Rover-based processing</h3><p>The rover is designed to transform imagery into terrain maps, evaluate travel costs, and plan routes using methods such as Theta*.</p></article>
+        <article class="detail-feature"><span class="detail-step">03</span><h3>Tether integration</h3><p>The proposed tether supports communication and power delivery between the aerial and ground platforms.</p></article>
+      </div>
+      <p class="detail-note">These are proposed capabilities described in the project proposal; individual subsystems are being developed and tested.</p>
+    </section>
+
+    <section class="detail-section" id="testing">
+      <p class="section-label">03 / DEVELOPMENT & TESTING</p><h2>Building and testing the system</h2>
+      <p>Current work includes mechanical development and drone flight testing as the team evaluates individual components before full integration.</p>
+      <div class="detail-gallery">
+        <figure><img src="../images/mars/rover.jpg" alt="Full view of the rover platform" loading="lazy"><figcaption>Rover platform</figcaption></figure>
+        <figure><img src="../images/mars/differential-gear.jpg" alt="Close-up of a differential gear mechanism" loading="lazy"><figcaption>Mechanical detail: differential gear system</figcaption></figure>
+      </div>
+      <div class="detail-video-wrap"><video controls playsinline preload="metadata" aria-label="MARS drone flight testing video"><source src="../videos/mars-drone-testing.mp4" type="video/mp4">Your browser does not support HTML video.</video></div>
+      <p class="detail-caption"><strong>Drone flight testing.</strong> Early footage recorded while the team evaluates autonomous flight behavior. The video documents a test flight but does not, by itself, establish the degree of autonomous control.</p>
+    </section>
+
+    <section class="detail-section" id="involvement">
+      <p class="section-label">04 / MY INVOLVEMENT</p><h2>Tether system & landing stability</h2>
+      <p>As part of the MARS research team, I am currently focusing on the tether system and the challenge of keeping the drone stable as it lands on different terrain surfaces. This work is still underway, and I hope to document the design decisions, testing process, and results as the system develops.</p>
+    </section>
+
+    <section class="detail-section" id="next">
+      <p class="section-label">05 / WHAT'S NEXT</p><h2>Research goals</h2>
+      <p>The team aims to integrate the aerial and ground platforms, investigate terrain mapping and path planning, and evaluate navigation reliability in challenging environments. Future updates to this page will distinguish measured results from planned milestones.</p>
+    </section>
+
+    <section class="detail-section" id="docs">
+      <p class="section-label">06 / RESEARCH APPROACH</p><h2>Technical direction</h2>
+      <p>The proposed rover navigation pipeline includes aerial image acquisition, weighted terrain mapping, Theta* path planning, slope-aware cost evaluation, spline-based trajectory smoothing, and closed-loop motion control. These are research objectives, not completed or validated features.</p>
+      <p>Our ongoing development work is focused on subsystem testing and integration. More technical results and documentation will be added as the research progresses.</p>
+    </section>
+    <div class="detail-end"><a class="back-link" href="../index.html#projects">← Back to all projects</a></div>
+  </main>
+  <footer><p>© 2026 Joaquin Maidana Borjas. Built with HTML, CSS & JavaScript.</p></footer>
+</body>
+</html>

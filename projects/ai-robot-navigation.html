@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-Guided Navigation and Decision-Making for Robots: reinforcement learning research, robot control integration, and Iowa Space Grant symposium presentation.">
+  <title>AI-Guided Robot Navigation | Joaquin Maidana Borjas</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+  <style>
+    .research-snapshot{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:25px 0 38px}
+    .research-snapshot div{background:var(--surface);border:1px solid var(--border);padding:18px;border-radius:8px}
+    .research-snapshot small{display:block;color:var(--muted);font-size:12px;margin-bottom:8px}
+    .research-snapshot strong{font-size:14px;line-height:1.4}
+    .research-flow{display:flex;align-items:stretch;gap:10px;margin:25px 0;flex-wrap:wrap}
+    .research-flow .node{flex:1 1 170px;min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:22px 14px;text-align:center}
+    .research-flow .node.focus{border-color:var(--accent)}
+    .research-flow .node strong{display:block;font-size:15px;margin-bottom:7px}
+    .research-flow .node small{color:var(--muted);font-size:12px}
+    .research-flow .arrow{align-self:center;color:var(--accent);font-size:24px}
+    .research-poster{display:block;width:100%;border:1px solid var(--border);border-radius:8px;background:var(--surface)}
+    .research-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0}
+    .research-stat{border:1px solid var(--border);background:var(--surface);border-radius:8px;padding:23px}
+    .research-stat strong{display:block;color:var(--accent);font-size:31px;margin-bottom:6px}
+    .research-stat span{font-size:13px;color:var(--muted)}
+    .detail-gallery img{object-fit:cover}
+    .research-poster-link{display:inline-block;margin-top:18px}
+    @media(max-width:750px){.research-snapshot{grid-template-columns:repeat(2,minmax(0,1fr))}.research-stats{grid-template-columns:1fr}.research-flow{flex-direction:column}.research-flow .node{flex:auto}.research-flow .arrow{transform:rotate(90deg)}}
+  </style>
+</head>
+<body>
+  <header><nav class="navbar" aria-label="Main navigation">
+    <a href="../index.html" class="logo">JMB.</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#education">Education</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#documents">Documents</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav></header>
+  <main class="detail-main">
+    <section class="detail-hero">
+      <a class="back-link" href="../index.html#projects">← Back to projects</a>
+      <p class="section-label">ARTIFICIAL INTELLIGENCE / ROBOTICS / RESEARCH</p>
+      <h1>AI-Guided <span>Robot Navigation</span></h1>
+      <p class="detail-lead">Investigating how reinforcement learning can help robots make movement decisions—and how those decisions can connect to an existing Python control system.</p>
+      <div class="detail-meta"><span>Loras College</span><span>Iowa Space Grant Research</span><span>Research Symposium</span></div>
+      <div class="research-snapshot">
+        <div><small>Research area</small><strong>Reinforcement learning</strong></div>
+        <div><small>Learning method</small><strong>Double DQN</strong></div>
+        <div><small>My focus</small><strong>Python control integration</strong></div>
+        <div><small>Verification</small><strong>Terminal-based testing</strong></div>
+      </div>
+      <figure class="detail-cover"><img src="../images/robot-navigation/symposium-presentation.jpeg" alt="Presenting AI-guided robot navigation research at a symposium" loading="eager"><figcaption>Sharing the team's research at the Iowa Space Grant symposium.</figcaption></figure>
+    </section>
+
+    <section class="detail-section" id="overview">
+      <p class="section-label">01 / OVERVIEW</p><h2>Teaching a robot to make decisions</h2>
+      <p>This research explores how reinforcement learning can support autonomous decision-making in a competitive robotic environment. Rather than relying entirely on a person operating a keyboard or joystick, the long-term goal is for a trained model to select actions based on information about its surroundings.</p>
+      <p>The project combines simulated robot behavior, neural network training, and software integration. The AI was evaluated in simulation; moving the complete system onto physical robots remains a future development goal.</p>
+    </section>
+
+    <section class="detail-section" id="method">
+      <p class="section-label">02 / TECHNICAL APPROACH</p><h2>How the learning system works</h2>
+      <div class="detail-feature-grid">
+        <article class="detail-feature"><span class="detail-step">01</span><h3>Observe the environment</h3><p>A 24-dimensional state vector represents information such as positions, headings, relative distances, and delayed perception.</p></article>
+        <article class="detail-feature"><span class="detail-step">02</span><h3>Evaluate actions</h3><p>A Double Deep Q-Network estimates the value of seven possible movement and rotation actions.</p></article>
+        <article class="detail-feature"><span class="detail-step">03</span><h3>Learn through feedback</h3><p>Training rewards useful tactical behavior and penalizes actions such as unfavorable collisions, helping the simulated agent improve its policy.</p></article>
+      </div>
+      <p>The model described in our research poster uses two 256-unit dense layers and a 128-unit dense layer, with batch normalization and ReLU activations. These details describe the team's research architecture, not solely my individual work.</p>
+    </section>
+
+    <section class="detail-section" id="results">
+      <p class="section-label">03 / TRAINING RESULTS</p><h2>What the simulation showed</h2>
+      <p>The team's initial evaluation covered approximately 850 training episodes. The poster reports that later episode rewards ranged from 1,320 to 2,828, while the rolling 50-episode average settled near 2,000. These observations suggest progress in simulated survival and targeting behavior, with considerable variation between episodes.</p>
+      <div class="research-stats">
+        <div class="research-stat"><strong>~850</strong><span>Training episodes evaluated</span></div>
+        <div class="research-stat"><strong>24</strong><span>Inputs in the state vector</span></div>
+        <div class="research-stat"><strong>7</strong><span>Available discrete actions</span></div>
+      </div>
+      <p class="detail-note">These are simulation and research-poster results. They do not demonstrate successful autonomous navigation by a physical robot.</p>
+    </section>
+
+    <section class="detail-section" id="contribution">
+      <p class="section-label">04 / MY CONTRIBUTION</p><h2>Connecting AI decisions to movement commands</h2>
+      <p>My main contribution was adapting the robot's Python control code to accept movement commands generated by the neural network, rather than relying only on keyboard or joystick inputs. I worked on connecting the network's selected actions to the existing directional control logic.</p>
+      <p>I verified the connection in the terminal: the neural network's decision output was used as the input for the corresponding movement command. This confirmed the software-side command mapping, but I did not test the integrated neural network controller on the physical robot.</p>
+      <div class="research-flow" role="img" aria-label="Neural network selects an action, Python control integration maps it to a movement command, and the command is verified in the terminal">
+        <div class="node"><strong>Neural network</strong><small>Selects an action</small></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="node focus"><strong>Python control integration</strong><small>My contribution: map the action to existing controls</small></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="node"><strong>Movement command</strong><small>Output verified in terminal</small></div>
+      </div>
+      <p class="detail-note">Diagram illustrates the software command flow tested during development; it is not evidence of physical robot operation.</p>
+    </section>
+
+    <section class="detail-section" id="symposium">
+      <p class="section-label">05 / RESEARCH PRESENTATION</p><h2>Presenting our work</h2>
+      <p>Our team presented the research at an Iowa Space Grant symposium and at Loras College Legacy Symposium. The poster brings together the learning architecture, training approach, simulation results, and planned next steps.</p>
+      <div class="detail-gallery">
+        <figure><img src="../images/robot-navigation/symposium-team.jpeg" alt="Research team at the symposium" loading="lazy"><figcaption>Research team presentation at ISGC Symposium</figcaption></figure>
+        <figure><img src="../images/robot-navigation/research-event.jpeg" alt="Research presentation event" loading="lazy"><figcaption>Research presentation at Legacy Symposium</figcaption></figure>
+      </div>
+      <h3>Research poster</h3>
+      <a href="../documents/ai-guided-navigation-poster.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open full research poster PDF in a new tab"><img class="research-poster" src="../images/robot-navigation/research-poster.png" alt="Research poster with neural network architecture, methodology, and training results" loading="lazy"></a>
+      <a class="btn-primary research-poster-link" href="../documents/ai-guided-navigation-poster.pdf" target="_blank" rel="noopener noreferrer">View full research poster (PDF)</a>
+      <p class="detail-caption">Research by Horia G. Popa, Emerson C. Gasmann, and Joaquin T. Maidana, with Dr. Nimish Mathure, as credited on the team poster.</p>
+    </section>
+
+    <section class="detail-section" id="future">
+      <p class="section-label">06 / WHAT'S NEXT</p><h2>From simulation toward physical robotics</h2>
+      <p>Future work includes refining the model's training and testing its decision-making on physical robot hardware. A key next step is connecting the neural network, command interface, and robot movement system into a complete, tested control loop.</p>
+      <p>As that work progresses, I hope to add more code-level documentation, integration tests, and hardware results to this page.</p>
+    </section>
+    <div class="detail-end"><a class="back-link" href="../index.html#projects">← Back to all projects</a></div>
+  </main>
+  <footer><p>© 2026 Joaquin Maidana Borjas. Built with HTML, CSS &amp; JavaScript.</p></footer>
+</body>
+</html>

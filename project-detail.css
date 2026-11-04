@@ -1,0 +1,30 @@
+/* Project-detail styles: loaded after your existing css/style.css */
+.detail-main {max-width:1100px;margin:0 auto;padding:0 25px;}
+.detail-hero {padding:75px 0 65px;animation:fadeIn .8s ease;}
+.back-link {display:inline-block;color:var(--accent);text-decoration:none;font-size:14px;margin-bottom:38px;}
+.back-link:hover {text-decoration:underline;}
+.detail-hero h1 {font-size:clamp(38px,6vw,64px);line-height:1.12;letter-spacing:-2px;margin:20px 0 24px;max-width:960px;}
+.detail-hero h1 span {color:var(--accent);}
+.detail-lead {max-width:780px;color:var(--muted);font-size:19px;}
+.detail-meta {display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 36px;}
+.detail-meta span {font-size:12px;color:var(--accent);border:1px solid var(--border);padding:7px 12px;border-radius:4px;}
+.detail-cover img {width:100%;max-height:550px;object-fit:contain;background:var(--surface);border:1px solid var(--border);border-radius:9px;display:block;}
+.detail-cover figcaption,.detail-gallery figcaption,.detail-caption {color:var(--muted);font-size:13px;margin-top:10px;}
+.detail-section {border-top:1px solid var(--border);padding:72px 0;}
+.detail-section h2 {font-size:clamp(28px,4vw,38px);letter-spacing:-1px;margin:12px 0 23px;}
+.detail-section p {max-width:830px;color:var(--muted);margin-bottom:17px;}
+.detail-feature-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:30px 0 18px;}
+.detail-feature {background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:25px;}
+.detail-step {font-size:13px;font-weight:bold;color:var(--accent);}
+.detail-feature h3 {font-size:18px;margin:12px 0;}
+.detail-feature p {font-size:14px;margin:0;}
+.detail-section .detail-note {font-size:13px;font-style:italic;}
+.detail-gallery {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0;}
+.detail-gallery img {width:100%;height:300px;object-fit:contain;background:var(--surface);border:1px solid var(--border);border-radius:8px;display:block;}
+.detail-video-wrap {margin-top:32px;max-width:850px;}
+.detail-video-wrap video {width:100%;display:block;border:1px solid var(--border);border-radius:8px;background:#000;}
+.detail-section .detail-caption {margin-top:12px;max-width:850px;}
+.detail-section .btn-primary {margin-top:15px;}
+.detail-end {border-top:1px solid var(--border);padding:35px 0 60px;}
+.detail-end .back-link {margin:0;}
+@media(max-width:700px){.detail-hero{padding-top:45px}.detail-section{padding:52px 0}.detail-feature-grid,.detail-gallery{grid-template-columns:1fr}.detail-gallery img{height:auto;max-height:380px}.detail-lead{font-size:17px}}
